@@ -1,0 +1,248 @@
+/* Set basic styles for the body: center content using flexbox */
+body {
+    font-family: Arial, sans-serif; /* Use a clean, readable sans-serif font */
+    font-size: 16px; /* Default font size for body text */
+    line-height: 1.6; /* Ensures good readability by adjusting the space between lines */
+    color: #333; /* Dark gray text color for better readability */
+    margin: 0; /* Remove default margin to control layout */
+    padding: 0; /* Remove default padding to control layout */
+    background-color: #f4f4f4; /* Light gray background for a clean look */
+    display: flex; /* Enable flexbox layout */
+    flex-direction: column; /* Arrange items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: flex-start; /* Start content at the top of the page */
+    min-height: 100vh; /* Ensure the body takes up the full viewport height */
+    padding-top: 160px; /* Adjust padding to provide more top space without cutting off the text */
+}
+
+/* Header styles: dark background with white text, centered for better layout */
+header {
+    background-color: #444; /* Dark gray background for the header */
+    color: white; /* White text color to contrast with the dark background */
+    padding: 20px 20px; /* Set padding for spacing inside the header */
+    text-align: center; /* Center the text within the header */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow below the header */
+    width: 100%; /* Make the header full-width */
+    position: fixed; /* Fix the header position to the top of the viewport */
+    top: 0; /* Align to the top of the viewport */
+    left: 0; /* Ensure the header aligns to the left edge of the viewport */
+    z-index: 1000; /* Ensure header stays on top of other elements */
+}
+
+/* New style for header content to maintain max-width and ensure the typing effect stays centered */
+.header-content {
+    max-width: 800px; /* Restrict the width of the content */
+    margin: 0 auto; /* Center the content within the header */
+    padding: 0 20px; /* Add some horizontal padding */
+}
+
+/* Control the position and alignment of the typing effect */
+.typing-effect {
+    text-align: left; /* Align text to the left */
+    margin: 0 auto; /* Center horizontally */
+    max-width: 800px; /* Set the max width to ensure it matches other content */
+    padding-top: 20px; /* Add padding to the top to space it from the header */
+    font-size: 24px; /* Font size adjusted to fit without cutting off */
+}
+
+/* Responsive adjustments for mobile screens */
+@media (max-width: 768px) {
+    body {
+        padding-top: 120px; /* Adjust padding for smaller screens to fit better */
+    }
+    header {
+        padding: 10px 0; /* Reduce padding for smaller screens */
+    }
+    .typing-effect {
+        padding-top: 10px; /* Adjust padding for smaller screens */
+        font-size: 20px; /* Reduce font size to fit better on smaller screens */
+    }
+}
+
+/* Set styles for all heading tags to maintain a uniform color and font */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Georgia', serif; /* Georgia serif font for a more professional feel */
+    color: #333; /* Keeping the heading color consistent with body text */
+}
+
+/* Style for the h1 heading: large and bold */
+h1 {
+    font-size: 30px; /* Reduced size to prevent cutting off the top */
+    color: #ff69b4; /* Pink color to match your branding */
+    margin-top: 0; /* Remove extra margin above */
+    padding: 0; /* Ensure there's no padding that might push text down */
+    line-height: 1.2; /* Tighter line height to reduce space between lines */
+}
+
+/* Style for the h2 headings to make them slightly smaller than h1 */
+h2 {
+    font-size: 28px; /* Slightly smaller size for section titles */
+    margin-top: 20px; /* Space above h2 to separate it from content */
+    margin-bottom: 10px; /* Space below h2 for clearer separation */
+}
+
+/* Navigation list styling: removing bullets and making links inline */
+nav ul {
+    list-style: none; /* Remove default bullet points from the list */
+    padding: 0; /* Remove default padding */
+}
+
+/* Navigation links: horizontal layout with spacing */
+nav ul li {
+    display: inline; /* Display the list items inline (next to each other) */
+    margin: 0 15px; /* Add space between the links */
+}
+
+/* Style for navigation links: white text, no underline */
+nav ul li a {
+    color: white; /* Make the links white to contrast with the dark header */
+    text-decoration: none; /* Remove the default underline from the links */
+    font-weight: bold; /* Make the links bold for better visibility */
+}
+
+/* Style for general sections: padded white boxes with rounded corners */
+section {
+    margin: 20px; /* Add margin around sections to separate content */
+    padding: 20px; /* Padding inside the section for better spacing */
+    background-color: white; /* White background to differentiate from the page */
+    border-radius: 5px; /* Rounded corners for a softer look */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Add a subtle shadow for depth */
+    line-height: 1.8; /* Improve readability with slightly more line spacing */
+    width: 100%; /* Full width */
+    max-width: 800px; /* Restrict the width of sections */
+}
+
+/* Styling the image within the figure element */
+figure img {
+    width: 120px; /* Set the image width to 120px to make it smaller */
+    height: auto; /* Auto-adjust the height to maintain aspect ratio */
+    border-radius: 50%; /* Make the image circular */
+    border: 3px solid #ddd; /* Light gray border around the image */
+    float: right; /* Float the image to the right to align with the text */
+    margin: 0 0 15px 15px; /* Add space around the image for proper positioning */
+}
+
+/* New styles for main content images */
+.main-content-image {
+    max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+    width: auto; /* Allow the width to adjust based on the max-width */
+    height: auto; /* Auto-adjust the height to maintain aspect ratio */
+    display: block; /* Make the image a block-level element to control spacing */
+    margin: 20px auto; /* Center the image horizontally and add vertical spacing */
+    border-radius: 8px; /* Add slightly rounded corners to the image */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Add a subtle shadow for depth */
+    max-height: 500px; /* Limit the maximum height of the image */
+    object-fit: contain; /* Ensure the entire image is visible within the constrained dimensions */
+}
+
+/* Updated profile image styles */
+.profile-image {
+    width: 150px !important; /* Reduced size and added !important */
+    height: 150px !important;
+    object-fit: cover !important; /* Ensure the image fills the circle without distortion */
+    border-radius: 50% !important; /* This makes the image circular */
+    display: block !important;
+    margin: 20px auto !important; /* This centers the image */
+    border: 3px solid #ddd !important; /* Optional: adds a border */
+}
+
+/* Responsive image sizing for larger screens */
+@media (min-width: 768px) {
+    .main-content-image {
+        max-width: 70%; /* Limit the image width to 70% of its container on larger screens */
+    }
+}
+
+/* Responsive image sizing for smaller screens */
+@media (max-width: 767px) {
+    .main-content-image {
+        width: 90%; /* Make image slightly smaller on mobile devices */
+    }
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Start below its original position */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Move to its original position */
+    }
+}
+
+/* Apply animation to the heading and paragraphs inside the Heading Tags Rhyme section */
+.heading-tags-rhyme h1,
+.heading-tags-rhyme h2,
+.heading-tags-rhyme h3,
+.heading-tags-rhyme h4,
+.heading-tags-rhyme h5,
+.heading-tags-rhyme h6,
+.heading-tags-rhyme p {
+    opacity: 0; /* Set initial opacity to 0 */
+    animation: fadeInUp 1s ease-out forwards; /* Apply fade-in animation */
+}
+
+/* Stagger the animation for each element */
+.heading-tags-rhyme h1 {
+    animation-delay: 0.3s; /* Delay for h1 */
+}
+
+.heading-tags-rhyme h2 {
+    animation-delay: 0.6s; /* Delay for h2 */
+}
+
+.heading-tags-rhyme h3 {
+    animation-delay: 0.9s; /* Delay for h3 */
+}
+
+.heading-tags-rhyme h4 {
+    animation-delay: 1.2s; /* Delay for h4 */
+}
+
+.heading-tags-rhyme h5 {
+    animation-delay: 1.5s; /* Delay for h5 */
+}
+
+.heading-tags-rhyme h6 {
+    animation-delay: 1.8s; /* Delay for h6 */
+}
+
+.heading-tags-rhyme p {
+    animation-delay: 2.1s; /* Delay for paragraphs */
+}
+
+/* Footer styles: dark background, white text, and fixed at the bottom */
+footer {
+    background-color: #444; /* Dark background matching the header */
+    color: white; /* White text to contrast with the dark background */
+    text-align: center; /* Center the text within the footer */
+    padding: 10px 0; /* Padding inside the footer for better spacing */
+    position: fixed; /* Make the footer stick to the bottom of the page */
+    width: 100%; /* Make the footer span the full width of the page */
+    bottom: 0; /* Position the footer at the very bottom */
+}
+
+/* Unordered list styles: square bullets and indented from the left */
+ul {
+    list-style-type: square; /* Change the bullets to square shapes */
+    padding-left: 20px; /* Indent the list from the left */
+}
+
+/* Ordered list styles: default numbers with indentation */
+ol {
+    list-style-type: decimal; /* Use decimal numbers for ordered lists */
+    padding-left: 20px; /* Indent the list from the left */
+}
+
+/* Emphasize important text with italics */
+em {
+    font-style: italic; /* Italicize emphasized text */
+    color: #c00; /* Red color to draw attention to the emphasized text */
+}
+
+/* Small text style for disclaimers or side comments */
+small {
+    font-size: 0.8em; /* Reduce the font size for small text */
+}
