@@ -1,85 +1,114 @@
 <!DOCTYPE html>
-<!-- The DOCTYPE declaration defines this document to be HTML5 -->
+<!-- This defines the document as HTML5, ensuring modern web standards are used -->
 <html lang="en">
-<head>
-    <!-- The <head> section contains meta-information about the document -->
-    <meta charset="UTF-8">
-    <!-- Specifies the character encoding for the HTML document -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Sets the viewport to make your website look good on all devices -->
-    <title>StynerDev - HTML Elements Exploration</title>
-    <!-- The title element specifies the title of the document, shown in the browser's title bar or tab -->
-</head>
+    <head>
+        <!-- Meta tags provide important information for the browser and affect how the page is displayed -->
+        <meta charset="UTF-8">
+        <!-- This ensures the website is responsive and adapts to different screen sizes (important for mobile) -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Title that appears in the browser's tab -->
+        <title>StynerDev - HTML Elements Exploration</title>
+        
+        <!-- Link to the external CSS file -->
+        <link rel="stylesheet" href="styles.css"> <!-- Assuming your CSS file is named 'styles.css' and is in the same folder -->
+    </head>
+    
 <body>
 
-    <!-- Header Section -->
-    <!-- The <header> element represents a container for introductory content or navigational links -->
     <header>
-        <!-- The <h1> element defines the most important heading on the page -->
-        <h1>Welcome to StynerDev's Website</h1>
-        <!-- The <nav> element defines a set of navigation links -->
+        <!-- Typing effect for the header -->
+        <div class="typing-effect">
+            <img src="https://readme-typing-svg.herokuapp.com?font=Pacifico&size=36&pause=1000&color=FF69B4&width=600&lines=Welcome+to+StynerDev's+Website" alt="Typing SVG" />
+        </div>
         <nav>
-            <!-- The <ul> element defines an unordered list -->
             <ul>
-                <!-- Each <li> defines a list item, and <a> is a hyperlink -->
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
-
+    
     <!-- Article Section -->
-    <!-- The <article> element represents a self-contained composition that can be independently distributed -->
     <article class="day-forecast">
-        <!-- The <h2> element defines a secondary heading -->
         <h2>Today's Weather Forecast</h2>
-        <!-- The <p> element defines a paragraph -->
         <p>Periods of sunshine with occasional showers.</p>
     </article>
 
-    <!-- Section Element -->
-    <!-- The <section> element defines a section in a document, used to group together related content -->
-    <section>
-        <h2>Introduction</h2>
-        <p>Welcome to my website! My name is Stymer Styner, and I go by StynerDev. This site is part of my exploration of HTML elements, specifically focusing on semantic tags and their usage in creating well-structured websites.</p>
+    <!-- About Me Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>👋 Hi there! I'm Stymer Styner, a Computer Science student at Dominican University with a strong passion for artificial intelligence, software development, and problem-solving.</p>
+
+        <h3>🎯 What I’m Learning</h3>
+        <p>I’m proficient in Python, JavaScript, and Jira, and I have hands-on experience with AWS, Git, and React.js.</p>
+
+        <h3>🔧 Skills and Tools</h3>
+        <ul>
+            <li>HTML5 & CSS3</li>
+            <li>JavaScript & React.js</li>
+            <li>Python & Django</li>
+            <li>Git & GitHub for version control</li>
+            <li>AWS for cloud development</li>
+        </ul>
+
+        <h3>💼 Projects & Achievements</h3>
+        <ul>
+            <li>Voice of Power: A voice application for TTS (Text-to-Speech) that allows users to upload PDFs and have them read aloud.</li>
+            <li>Full Stack Application Development Project V2: A capstone project using React, Node.js, and MongoDB.</li>
+        </ul>
+
+        <h3>📢 Community Engagement</h3>
+        <p>I participate in the Cardific Farm Community and speak at events on topics like social justice, climate change, and mental health.</p>
     </section>
 
-    <!-- Headings Example Section -->
-    <!-- This section demonstrates the use of <h1> through <h6> elements to represent headings of different levels -->
-    <section>
-        <h2>Heading Tags Example</h2>
-        <!-- The <h1> to <h6> elements define HTML headings. <h1> is the most important, and <h6> is the least important. -->
-        <h1>This is an H1 Heading - Main Title</h1>
-        <h2>This is an H2 Heading - Section Title</h2>
-        <h3>This is an H3 Heading - Subsection Title</h3>
-        <h4>This is an H4 Heading - Detailed Topic</h4>
-        <h5>This is an H5 Heading - Minor Point</h5>
-        <h6>This is an H6 Heading - Footnote or Less Important Point</h6>
+    <!-- Heading Tags Rhyme with Animation -->
+    <section class="heading-tags-rhyme">
+        <div class="tagcloud-wrapper">
+            <div class="tagcloud-controls" style="--num-elements: 6">
+                <div class="tagcloud-rotation">
+                    <ul class="tagcloud-tags" style="--num-elements: 6">
+                        <li class="tagcloud-tag" style="--index: 1">
+                            <div><h1>This is the big one, h1, you see,</h1></div>
+                        </li>
+                        <li class="tagcloud-tag" style="--index: 2">
+                            <div><h2>h2 follows close, for sections you need,</h2></div>
+                        </li>
+                        <li class="tagcloud-tag" style="--index: 3">
+                            <div><h3>h3 takes charge when details expand,</h3></div>
+                        </li>
+                        <li class="tagcloud-tag" style="--index: 4">
+                            <div><h4>h4 goes deeper, not the main show,</h4></div>
+                        </li>
+                        <li class="tagcloud-tag" style="--index: 5">
+                            <div><h5>h5 is smaller, a minor point to make,</h5></div>
+                        </li>
+                        <li class="tagcloud-tag" style="--index: 6">
+                            <div><h6>h6 is the tiniest, least in the stack,</h6></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Image and Figure -->
-    <!-- The <figure> element is used to group media content and captions -->
+    <!-- Figure Element -->
     <figure>
-        <!-- The <img> element embeds an image into the document -->
-        <img src="images/StynerDev.jpg" alt="Stymer Styner, Student of Prof. Mitchell Hudson">
-        <!-- The <figcaption> element represents a caption or legend associated with the content of its parent <figure> -->
-        <figcaption>This is a caption for the image above, depicting Stymer Styner, a student of Prof. Mitchell Hudson.</figcaption>
+        <img src="images/StynerDev.jpg" alt="Styner Styner, Student of Prof. Mitchell Hudson" class="profile-image">
+        <figcaption>This is an image of me, Styner Styner, a student of Prof. Mitchell Hudson.</figcaption>
     </figure>
 
-    <!-- Lists Section -->
+    <!-- Technologies List -->
     <section>
-        <!-- The <h2> element introduces a new section with its own heading -->
         <h2>Technologies I Work With</h2>
-        <!-- An unordered list (<ul>) is used here because the order of the list items doesn't matter -->
         <ul>
-            <!-- Each <li> element represents an item in the list -->
             <li>HTML & CSS</li>
             <li>JavaScript</li>
             <li>React.js</li>
         </ul>
+
+        <!-- Steps to Build a Project -->
         <h2>Steps to Build a Project</h2>
-        <!-- An ordered list (<ol>) is used here because the order of the list items is important -->
         <ol>
             <li>Plan your content</li>
             <li>Write your HTML structure</li>
@@ -87,22 +116,9 @@
         </ol>
     </section>
 
-    <!-- Inline Semantics -->
-    <!-- Inline elements like <em>, <small>, and <strong> are used to give semantic meaning to certain text -->
-    <section>
-        <!-- The <em> element emphasizes text, typically rendering it in italics -->
-        <p>This is an <em>important</em> note about using semantic HTML in your projects.</p>
-        <!-- The <small> element represents side-comments and small print -->
-        <p>Disclaimer: <small>This site is for educational purposes only.</small></p>
-        <!-- The <strong> element indicates that the text has strong importance, typically rendering it in bold -->
-        <p>Remember, security is a <strong>critical</strong> aspect of web development.</p>
-    </section>
-
-    <!-- Footer Section -->
-    <!-- The <footer> element defines a footer for a document or section -->
+    <!-- Footer -->
     <footer>
-        <!-- Footer content typically includes information about the author, copyright, contact information, etc. -->
-        <p>&copy; 2024 StynerDev - Created by Stymer Styner</p>
+        <p>&copy; 2024 StynerDev - Created by Styner Styner</p>
     </footer>
 
 </body>
